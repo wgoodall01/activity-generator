@@ -14,7 +14,7 @@ const OpenWithOverleaf = ({text, onReset}) => (
     <textarea hidden name="snip" value={text} readOnly />
     <input hidden type="checkbox" name="splash" value={false} />
     <input className="OpenWithOverleaf_button" type="submit" value="Open in Overleaf" />
-    <button onClick={onReset} className="OpenWithOverleaf_reset">
+    <button type="button" onClick={onReset} className="OpenWithOverleaf_reset">
       Reset
     </button>
   </form>

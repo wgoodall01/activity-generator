@@ -85,7 +85,7 @@ class App extends Component {
     } else if (status === 'working') {
       block = <LoadingSpinner label={workMsg} />;
     } else if (status === 'done') {
-      block = <OpenWithOverleaf text={result} />;
+      block = <OpenWithOverleaf text={result} onReset={() => this.advance('reset')} />;
     } else if (status === 'error') {
       block = <Error label={err} onReset={() => this.advance('reset')} />;
     }
