@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  animation: index_background 500s infinite;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+@keyframes index_background {
+  0% {
+    background-color: #c0392b;
+  }
+  20% {
+    background-color: #d35400;
+  }
+  40% {
+    background-color: #16a085;
+  }
+  60% {
+    background-color: #2980b9;
+  }
+  80% {
+    background-color: #8e44ad;
+  }
+  100% {
+    background-color: #c0392b;
+  }
+}
