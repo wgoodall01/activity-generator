@@ -35,7 +35,7 @@ const template = ({title, rows}) => `
 \\usepackage[utf8]{inputenc}
 \\usepackage[T1]{fontenc}
 \\usepackage[margin=1in]{geometry}
-\\usepackage{tabularx}
+\\usepackage{ltablex}
 \\usepackage{ifthen}
 \\usepackage{titling}
 \\usepackage{setspace}
