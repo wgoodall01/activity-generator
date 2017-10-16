@@ -44,6 +44,12 @@
   border-radius: 4px;
 }
 
+.DetailsForm_checkbox {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+
 .DetailsForm_button {
   margin-top: auto;
   width: 100%;

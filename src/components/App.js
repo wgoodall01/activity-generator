@@ -68,6 +68,9 @@ class App extends Component {
       this.advance('start', params);
       this.advance('work', 'Getting Quizlet set...');
       const set = await getSetFromUrl(params.url);
+      if (params.reverse) {
+        set.reverseTerms();
+      }
       this.advance('work', 'Generating activity...');
       const text = activitiesFromNames[params.type](set, params);
       this.advance('finish', text);

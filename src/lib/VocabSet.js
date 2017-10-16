@@ -10,4 +10,8 @@ export default class VocabSet {
     this.name = name;
     this.words = words;
   }
+
+  reverseTerms() {
+    this.words = this.words.map(([a, b]) => [b, a]);
+  }
 }

@@ -17,13 +17,17 @@ class DetailsForm extends React.PureComponent {
     this.state = {
       url: '',
       type: 'matching',
-      num: ''
+      num: '',
+      reverse: false
     };
   }
 
   onChange(e) {
-    console.log(`${e.target.name} -> ${e.target.value}`);
-    this.setState({[e.target.name]: e.target.value});
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({[name]: value});
   }
 
   onSubmit(e) {
@@ -31,13 +35,14 @@ class DetailsForm extends React.PureComponent {
     const params = {
       url: this.state.url,
       type: this.state.type,
+      reverse: this.state.reverse,
       num: this.state.num || null
     };
     this.props.onSubmit(params);
   }
 
   render() {
-    const {url, type, num} = this.state;
+    const {url, type, num, reverse} = this.state;
     return (
       <div className="DetailsForm">
         <Label label="Quizlet URL">
@@ -61,6 +66,18 @@ class DetailsForm extends React.PureComponent {
             />
           </Label>
         </Row>
+
+        <label className="DetailsForm_group">
+          <input
+            type="checkbox"
+            className="DetailsForm_checkbox"
+            label="Reverse terms/definitions"
+            onChange={this.onChange.bind(this)}
+            checked={reverse}
+            name="reverse"
+          />
+          Reverse terms/definitions
+        </label>
 
         <p className="DetailsForm_description">
           Just pop in a quizlet URL, pick an activity type and number of questions, and hit go. More
