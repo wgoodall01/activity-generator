@@ -47,7 +47,8 @@ class DetailsForm extends React.PureComponent {
         <Row>
           <Label label="Activity Type">
             <select onChange={this.onChange.bind(this)} name="type" value={type}>
-              <option name="matching">Matching</option>
+              <option value="matching">Matching</option>
+              <option value="multiple">Multiple Choice</option>
             </select>
           </Label>
           <Label label="Number of Questions">
