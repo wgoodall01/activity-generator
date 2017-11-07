@@ -22,7 +22,7 @@ export async function getSetFromUrl(setUrl) {
   // Don't want to stand up servers for this, so I'm using some random
   // sketchy CORS proxy instead. Everything's public anyhow so there's no
   // real security risk.
-  const corsUrl = `https://jsonp.herokuapp.com/?url=${encodeURIComponent(apiUrl)}`;
+  const corsUrl = `https://cors-anywhere.herokuapp.com/${apiUrl}`;
 
   try {
     const response = await fetch(corsUrl, {mode: 'cors'});
