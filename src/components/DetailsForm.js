@@ -92,7 +92,7 @@ class DetailsForm extends React.PureComponent {
   }
 }
 
-DetailsForm.PropTypes = {
+DetailsForm.propTypes = {
   onSubmit: PropTypes.func
 };
 

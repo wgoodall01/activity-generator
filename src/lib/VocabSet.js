@@ -3,7 +3,7 @@ export default class VocabSet {
     if (typeof name !== 'string') {
       throw new Error('Name must be a string');
     }
-    if (!words instanceof Array) {
+    if (!(words instanceof Array)) {
       throw new Error('Words must be an array of 2-arrays');
     }
 
