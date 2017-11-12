@@ -2,7 +2,7 @@
 Generate worksheets from Quizlet sets.
 
 ## Use
-Get any (public) Quizlet set you want, pop in the URL, pick the type of activity and number of questions, and hit to. Wait for a couple seconds, hit the 'Open in Overleaf' button, and print. Done!
+Get any (public) Quizlet set you want, pop in the URL, pick the type of activity and number of questions, and hit go. Wait for a couple seconds, hit the 'Open in Overleaf' button, and print. Done!
 
 ## Some screenshots
 ![The main form](https://i.imgur.com/pUJpMry.png)
